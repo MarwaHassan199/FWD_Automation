@@ -12,7 +12,7 @@ public class UserSearch {
     loginPage login = new loginPage((ChromeDriver) Hooks.driver);
     SearchPage search = new SearchPage((ChromeDriver) Hooks.driver);
 
-    @Given("Logged-in user")
+    @Given("Loggedin user")
     public void logged_in(){
         login.OpenLoginPage();
         login.UserLogin("maroo1181999@gmail.com","123456");
@@ -30,7 +30,7 @@ public class UserSearch {
         search.SearchBox("book");
     }
 
-    @Then("User could find relative results")
+    @Then("find relative results")
     public void couldfindrelatedresults()
     {
         int count=   search.ProductTitle.size();
